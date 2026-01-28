@@ -88,15 +88,15 @@ namespace WebApplication2.Controllers
             string model = insuree.CarModel?.Trim().ToLower() ?? "";
 
             // Check for specific vehicle make/model combinations that incur additional fees
-            if (make == "Porsche")
-            {
-                baseQuote += 25m;
+           if (make == "porsche")
+{
+    baseQuote += 25m;
 
-                if (model == "911 Carrera")
-                {
-                    baseQuote += 25m;
-                }
-            }
+    if (model == "911 carrera")
+    {
+        baseQuote += 25m;
+    }
+}
 
             // Apply a flat fee per recorded speeding ticket
             baseQuote += insuree.SpeedingTickets * 10m;
@@ -196,3 +196,4 @@ namespace WebApplication2.Controllers
         }
     }
 }
+
